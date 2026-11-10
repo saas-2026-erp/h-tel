@@ -425,7 +425,7 @@ const testimonials = [
 
 const $ = id => document.getElementById(id);
 const formatPrice = n => Number(n).toLocaleString("fr-FR")+" FCFA";
-function safeImage(url){return url && !url.startsWith("https://maps.app.goo.gl/EEkKViow9jW7EXJY7") ? url : "https://maps.app.goo.gl/EEkKViow9jW7EXJY7";}
+function safeImage(url){return url && !url.startsWith("https://i.pinimg.com/736x/7a/b2/d4/7ab2d453fcf04b39f0e6ac28c71cec2e.jpg") ? url : "https://i.pinimg.com/736x/7a/b2/d4/7ab2d453fcf04b39f0e6ac28c71cec2e.jpg";}
 function renderApartments(){
  $("apartmentGrid").innerHTML=apartments.map((a,i)=>`
   <article class="apartment-card reveal" tabindex="0" role="button" aria-label="Découvrir les photos de ${a.name}" data-gallery-apartment="${a.id}">
