@@ -156,7 +156,7 @@ a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}b
  }
 
  .hero h1{
-  font-size:clamp(32px,7.5vw,44px);
+  font-size:clamp(32px,7.5vw,40px);
   line-height:1.08;
   letter-spacing:-.03em;
   margin:17px 0 15px;
@@ -215,7 +215,9 @@ a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}b
 .site-header.scrolled{background:rgba(23,23,23,.97)}
 .brand-name,.hero-kicker,.hero h1 em,.trust-item strong,.footer h4,.stars{color:#fff}
 .hero{background-image:linear-gradient(115deg,rgba(15,15,15,.96),rgba(35,35,35,.78) 58%,rgba(50,50,50,.28)),var(--hero-image)}
-.hero:before{background:linear-gradient(90deg,#111111f0,#17171780 43%,#17171720 82%),linear-gradient(0deg,#00000055,transparent 45%)}
+.hero:before{
+ display:none;
+}
 .trust-strip,.testimonials,.footer{background:#171717}
 .location-visual{background-image:linear-gradient(145deg,#17171722,#17171744),url("COLLER_ICI_URL_IMAGE_LOCALISATION")}
 .contact-panel,.gallery-section{background:#f1f1f1}
