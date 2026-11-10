@@ -8,8 +8,8 @@
 <title>Maison Azur — Résidence & Appartements meublés</title>
 <style>
 :root{
-  --hero-image:url("COLLER_ICI_URL_IMAGE_HERO");
-  --intro-image:url("COLLER_ICI_URL_IMAGE_RESIDENCE");
+  --hero-image:url("https://i.pinimg.com/736x/dd/6f/da/dd6fda73122feec19abd8811b747a860.jpg");
+  --intro-image:url("https://i.pinimg.com/1200x/57/e7/ec/57e7ec16999f7444569bdbf5b1902e03.jpg");
   --ink:#171717;--green:#171717;--green2:#242424;--cream:#f4f5f6;
   --paper:#ffffff;--terra:#a6533d;--gold:#a6533d;--muted:#62666b;
   --line:rgba(20,20,20,.10);--serif:Georgia,'Times New Roman',serif;
@@ -36,8 +36,21 @@ a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}b
 .brand-sub{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#f1e9dc;margin-top:7px}
 .nav-links{display:flex;align-items:center;gap:25px;font-size:11px}.nav-links a{opacity:.92}.nav-links a:hover{color:#e5c99b}
 .nav-cta{min-height:42px;padding:0 16px;font-size:10px}.menu-toggle{display:none;background:none;border:0;color:white;font-size:25px}
-.hero{min-height:690px;height:min(780px,92vh);position:relative;display:flex;align-items:center;overflow:hidden;background-image:linear-gradient(115deg,rgba(20,35,27,.96),rgba(38,63,52,.78) 58%,rgba(52,72,58,.28)),var(--hero-image);background-size:cover;background-position:center;color:white}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101913f0,#131d1680 43%,#131d1620 82%),linear-gradient(0deg,#0a0f0c55,transparent 45%)}
+.hero{
+ min-height:690px;
+ height:min(780px,92vh);
+ position:relative;
+ display:flex;
+ align-items:center;
+ overflow:hidden;
+ background-image:var(--hero-image);
+ background-size:cover;
+ background-position:center;
+ color:white;
+}
+.hero:before{
+ display:none;
+}
 .hero-content{position:relative;z-index:1;padding-top:65px;max-width:690px}
 .hero-kicker{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#e4c99d}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(55px,7vw,91px);line-height:.98;letter-spacing:-.055em;margin:25px 0 22px;max-width:690px}
@@ -132,17 +145,70 @@ a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}b
  .footer-main{grid-template-columns:1fr 1fr;gap:25px 17px}.footer-brand{grid-column:1/-1}
  .booking-form{grid-template-columns:1fr}.field.full,.booking-form .btn{grid-column:auto}
 }
-@media(max-width:390px){.trust-item strong{font-size:20px}.amenity-grid{grid-template-columns:1fr 1fr}.footer-main{grid-template-columns:1fr}.footer-brand{grid-column:auto}.gallery-main{height:340px}}
+
 @media(max-width:700px){
- .section-title,.gallery-intro .section-title{font-size:clamp(30px,8.5vw,42px);line-height:1.06;letter-spacing:-.035em;margin:9px 0 11px}
- .hero h1{line-height:1.02;letter-spacing:-.04em;margin:17px 0 15px}
- .eyebrow{font-size:9px;letter-spacing:.14em}
- .gallery-intro p,.section-copy{font-size:13px;line-height:1.65}
- .gallery-widget{padding:10px}.gallery-main{height:340px}.gallery-thumbs button{flex-basis:68px;height:52px}
- .apartment-body{padding:17px}.apartment-body h3{font-size:24px}
- .intro-copy{padding:32px 22px}.location-copy{padding:38px 22px}
- .trust-grid{padding:17px 0}.contact-panel{padding:22px 18px}
+ .section-title,
+ .gallery-intro .section-title{
+  font-size:clamp(25px,6.5vw,34px);
+  line-height:1.12;
+  letter-spacing:-.025em;
+  margin:9px 0 11px;
+ }
+
+ .hero h1{
+  font-size:clamp(32px,7.5vw,44px);
+  line-height:1.08;
+  letter-spacing:-.03em;
+  margin:17px 0 15px;
+ }
+
+ .eyebrow{
+  font-size:9px;
+  letter-spacing:.14em;
+ }
+
+ .gallery-intro p,
+ .section-copy{
+  font-size:13px;
+  line-height:1.65;
+ }
+
+ .gallery-widget{padding:10px}
+ .gallery-main{height:340px}
+ .gallery-thumbs button{
+  flex-basis:68px;
+  height:52px;
+ }
+
+ .apartment-body{padding:17px}
+ .apartment-body h3{font-size:21px}
+
+ .intro-copy{padding:32px 22px}
+ .location-copy{padding:38px 22px}
+ .trust-grid{padding:17px 0}
+ .contact-panel{padding:22px 18px}
 }
+
+@media(max-width:390px){
+ .hero h1{
+  font-size:clamp(29px,8vw,34px);
+  line-height:1.1;
+ }
+
+ .section-title,
+ .gallery-intro .section-title{
+  font-size:clamp(23px,7vw,28px);
+  line-height:1.15;
+ }
+
+ .trust-item strong{font-size:20px}
+ .amenity-grid{grid-template-columns:1fr 1fr}
+ .footer-main{grid-template-columns:1fr}
+ .footer-brand{grid-column:auto}
+ .gallery-main{height:300px}
+ .apartment-body h3{font-size:20px}
+}
+
 /* Harmonisation stricte noir / blanc / terracotta */
 :root{--green:#171717;--green2:#171717;--cream:#f5f5f5;--paper:#fff;--terra:#b45d45;--gold:#b45d45;--line:transparent}
 .eyebrow{color:var(--terra)}.eyebrow:before{display:none}
