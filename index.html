@@ -8,6 +8,7 @@
 <title>Maison Azur — Résidence & Appartements meublés</title>
 <style>
 :root{
+  /* PHOTO DU HERO : remplacez uniquement l’URL entre guillemets */
   --hero-image:url("https://i.pinimg.com/736x/e2/61/ee/e261ee10a6c4db2c634c1bb4911822d7.jpg");
   --intro-image:url("https://i.pinimg.com/1200x/57/e7/ec/57e7ec16999f7444569bdbf5b1902e03.jpg");
   --ink:#171717;--green:#171717;--green2:#242424;--cream:#f4f5f6;
@@ -279,8 +280,8 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
  <div class="container gallery-layout">
   <div class="gallery-intro reveal"><div class="eyebrow">Visite en images</div><h2 class="section-title">Entrez, explorez et projetez-vous.</h2><p>Sélectionnez un appartement, puis faites défiler ses photos avec les flèches ou les miniatures pour découvrir chaque espace.</p><p>Les photos sont à remplacer directement dans la configuration de chaque appartement.</p></div>
   <div class="gallery-widget reveal">
-   <div class="gallery-main"><img id="https://i.pinimg.com/736x/40/4c/ea/404ceacc97db3844458204973918fc01.jpg" src="" alt="Vue de l'appartement"><button class="gallery-arrow prev" id="galleryPrev" type="button" aria-label="Photo précédente">‹</button><button class="gallery-arrow next" id="galleryNext" type="button" aria-label="Photo suivante">›</button></div>
-   <div class="gallery-caption"><span id="">Appartement</span><span id="galleryCounter">1 / 1</span></div>
+   <div class="gallery-main"><img id="galleryMainImage" src="" alt="Vue de l'appartement"><button class="gallery-arrow prev" id="galleryPrev" type="button" aria-label="Photo précédente">‹</button><button class="gallery-arrow next" id="galleryNext" type="button" aria-label="Photo suivante">›</button></div>
+   <div class="gallery-caption"><span id="galleryApartmentName">Appartement</span><span id="galleryCounter">1 / 1</span></div>
    <div class="gallery-thumbs" id="galleryThumbs"></div>
   </div>
  </div>
@@ -334,6 +335,7 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
 // =======================================================
 // CONFIGURATION À PERSONNALISER — REMPLACEZ LES VALEURS
 // =======================================================
+// A. COORDONNÉES ET IDENTITÉ DE LA RÉSIDENCE
 const RESIDENCE = {
  name: "Maison Azur",
  city: "Yamoussoukro",
@@ -344,51 +346,62 @@ const RESIDENCE = {
  mapUrl: "https://maps.google.com/?q=Yamoussoukro",
 };
 
-// Chaque appartement : nom, catégorie, prix par nuit, capacité,
-// description, équipements, photo de couverture et galerie de pièces.
-// Remplacez les liens COLLER_URL... par les URL de vos propres photos.
+// =======================================================
+// PHOTOS DES APPARTEMENTS — C'EST ICI QUE VOUS COLLEZ VOS IMAGES
+// =======================================================
+// Pour chaque appartement, remplacez les textes entre guillemets
+// qui commencent par REMPLACER_PAR_ par l'adresse de votre photo.
+// Exemple si l'image est dans le dossier public/images de Vercel :
+// cover: "/images/appartement-1-couverture.jpg"
+// Exemple avec une image hébergée en ligne : cover: "https://.../photo.jpg"
+// IMPORTANT : cover = photo sur la carte de l'appartement.
+// photos = images qui défilent dans le carrousel après un clic sur la carte.
+// Vous pouvez ajouter/supprimer des lignes {label:"...", url:"..."}.
+// Gardez les virgules entre les lignes.
+
 const apartments = [
  {
   id:"apt1", name:"Appartement 2 pièces", type:"Confort", price:35000, capacity:"2 à 3 personnes",
   description:"Un appartement accueillant avec des espaces bien aménagés pour un séjour confortable.",
   amenities:["Salon","1 chambre","Cuisine équipée","Climatisation"],
-  cover:"COLLER_URL_PHOTO_COUVERTURE_APPARTEMENT_1",
+  cover:"REMPLACER_PAR_PHOTO_COUVERTURE_APPARTEMENT_1",
   photos:[
-   {label:"Salon",url:"COLLER_URL_PHOTO_SALON_APPARTEMENT_1"},
-   {label:"Chambre",url:"COLLER_URL_PHOTO_CHAMBRE_APPARTEMENT_1"},
-   {label:"Véranda",url:"COLLER_URL_PHOTO_VERANDA_APPARTEMENT_1"},
-   {label:"Cuisine",url:"COLLER_URL_PHOTO_CUISINE_APPARTEMENT_1"},
-   {label:"Salle de bain",url:"COLLER_URL_PHOTO_DOUCHE_APPARTEMENT_1"}
+   {label:"Salon",url:"REMPLACER_PAR_PHOTO_SALON_APPARTEMENT_1"},
+   {label:"Chambre",url:"REMPLACER_PAR_PHOTO_CHAMBRE_APPARTEMENT_1"},
+   {label:"Véranda",url:"REMPLACER_PAR_PHOTO_VERANDA_APPARTEMENT_1"},
+   {label:"Cuisine",url:"REMPLACER_PAR_PHOTO_CUISINE_APPARTEMENT_1"},
+   {label:"Salle de bain",url:"REMPLACER_PAR_PHOTO_SALLE_DE_BAIN_APPARTEMENT_1"}
   ]
  },
  {
   id:"apt2", name:"Appartement 3 pièces", type:"Supérieur", price:50000, capacity:"3 à 4 personnes",
   description:"Davantage d'espace pour les séjours en famille, entre amis ou les déplacements professionnels.",
   amenities:["Salon spacieux","2 chambres","Cuisine équipée","Balcon"],
-  cover:"COLLER_URL_PHOTO_COUVERTURE_APPARTEMENT_2",
+  cover:"REMPLACER_PAR_PHOTO_COUVERTURE_APPARTEMENT_2",
   photos:[
-   {label:"Salon",url:"COLLER_URL_PHOTO_SALON_APPARTEMENT_2"},
-   {label:"Chambre principale",url:"COLLER_URL_PHOTO_CHAMBRE_1_APPARTEMENT_2"},
-   {label:"Deuxième chambre",url:"COLLER_URL_PHOTO_CHAMBRE_2_APPARTEMENT_2"},
-   {label:"Véranda",url:"COLLER_URL_PHOTO_VERANDA_APPARTEMENT_2"},
-   {label:"Cuisine",url:"COLLER_URL_PHOTO_CUISINE_APPARTEMENT_2"},
-   {label:"Salle de bain",url:"COLLER_URL_PHOTO_DOUCHE_APPARTEMENT_2"}
+   {label:"Salon",url:"REMPLACER_PAR_PHOTO_SALON_APPARTEMENT_2"},
+   {label:"Chambre principale",url:"REMPLACER_PAR_PHOTO_CHAMBRE_1_APPARTEMENT_2"},
+   {label:"Deuxième chambre",url:"REMPLACER_PAR_PHOTO_CHAMBRE_2_APPARTEMENT_2"},
+   {label:"Véranda",url:"REMPLACER_PAR_PHOTO_VERANDA_APPARTEMENT_2"},
+   {label:"Cuisine",url:"REMPLACER_PAR_PHOTO_CUISINE_APPARTEMENT_2"},
+   {label:"Salle de bain",url:"REMPLACER_PAR_PHOTO_SALLE_DE_BAIN_APPARTEMENT_2"}
   ]
  },
  {
   id:"apt3", name:"Studio meublé", type:"Essentiel", price:25000, capacity:"1 à 2 personnes",
   description:"Un espace fonctionnel et confortable, idéal pour un court séjour ou un déplacement en solo.",
   amenities:["Espace nuit","Kitchenette","Climatisation","Salle de bain"],
-  cover:"COLLER_URL_PHOTO_COUVERTURE_STUDIO",
+  cover:"REMPLACER_PAR_PHOTO_COUVERTURE_STUDIO",
   photos:[
-   {label:"Vue générale",url:"COLLER_URL_PHOTO_VUE_GENERALE_STUDIO"},
-   {label:"Espace nuit",url:"COLLER_URL_PHOTO_CHAMBRE_STUDIO"},
-   {label:"Kitchenette",url:"COLLER_URL_PHOTO_CUISINE_STUDIO"},
-   {label:"Salle de bain",url:"COLLER_URL_PHOTO_DOUCHE_STUDIO"}
+   {label:"Vue générale",url:"REMPLACER_PAR_PHOTO_VUE_GENERALE_STUDIO"},
+   {label:"Espace nuit",url:"REMPLACER_PAR_PHOTO_ESPACE_NUIT_STUDIO"},
+   {label:"Kitchenette",url:"REMPLACER_PAR_PHOTO_KITCHENETTE_STUDIO"},
+   {label:"Salle de bain",url:"REMPLACER_PAR_PHOTO_SALLE_DE_BAIN_STUDIO"}
   ]
  }
 ];
 
+// B. SERVICES ET ÉQUIPEMENTS À AFFICHER
 // Prestations : supprimez celles qui ne sont pas réellement disponibles.
 const amenities = [
  ["⌁","Wi-Fi","Connexion internet disponible dans la résidence."],
@@ -401,6 +414,7 @@ const amenities = [
  ["✓","Sécurité","Dispositif de sécurité de la résidence."]
 ];
 
+// C. TÉMOIGNAGES À PERSONNALISER
 // Témoignages : remplacez ces exemples par de vrais avis autorisés.
 // Ne publiez jamais de faux avis comme s'ils étaient authentiques.
 const testimonials = [
@@ -411,7 +425,7 @@ const testimonials = [
 
 const $ = id => document.getElementById(id);
 const formatPrice = n => Number(n).toLocaleString("fr-FR")+" FCFA";
-function safeImage(url){return url && !url.startsWith("COLLER_URL") ? url : "https://placehold.co/900x650/e5ded2/263f34?text=Ajouter+votre+photo";}
+function safeImage(url){return url && !url.startsWith("REMPLACER_PAR_") ? url : "https://placehold.co/900x650/e5ded2/263f34?text=Ajouter+votre+photo";}
 function renderApartments(){
  $("apartmentGrid").innerHTML=apartments.map((a,i)=>`
   <article class="apartment-card reveal" tabindex="0" role="button" aria-label="Découvrir les photos de ${a.name}" data-gallery-apartment="${a.id}">
