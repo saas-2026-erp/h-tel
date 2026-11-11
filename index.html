@@ -340,7 +340,11 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
 <section class="contact-section" id="contact">
  <div class="container contact-panel"><div><div class="eyebrow">Réservation & renseignements</div><h2 class="section-title">Votre prochain séjour commence ici.</h2><p class="section-copy">Une question sur un appartement, les disponibilités ou les tarifs ? Contactez directement notre équipe.</p></div>
   <div><p class="section-copy">Envoyez votre demande de réservation en quelques instants. Un récapitulatif sera préparé et transmis sur WhatsApp pour confirmation par la résidence.</p>
-   <div class="contact-actions"><button class="btn btn-gold" id="openBooking">Demander une réservation ↗</button><a class="btn btn-dark" id="callLink" href="tel:+2250000000000">Appeler directement ☎</a></div>
+   <div class="contact-actions"><button class="btn btn-gold" id="openBooking">Demander une réservation <span class="arrow-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M7 17 17 7M7 7h10v10"/>
+  </svg>
+</span></button><a class="btn btn-dark" id="callLink" href="tel:+2250000000000">Appeler directement ☎</a></div>
   </div>
  </div>
 </section>
@@ -353,7 +357,7 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
  </div><div class="footer-copy">© <span id="year"></span> <span id="copyrightName">Maison Azur</span> · Tous droits réservés.</div></div></footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
- <div class="modal-card"><div class="modal-top"><h2 id="bookingTitle">Votre demande de réservation</h2><button class="modal-close" id="closeBooking" aria-label="Fermer">×</button></div>
+ <div class="modal-card"><div class="modal-top"><h3 id="bookingTitle">Votre demande de réservation</h3><button class="modal-close" id="closeBooking" aria-label="Fermer">×</button></div>
   <p class="modal-note">Renseignez vos dates et vos coordonnées. Votre demande sera envoyée à la résidence sur WhatsApp ; la disponibilité sera confirmée par son équipe.</p>
   <form class="booking-form" id="bookingForm">
    <div class="field full"><label for="bookingApartment">Appartement souhaité</label><select id="bookingApartment" required></select></div>
@@ -364,7 +368,11 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
    <div class="field"><label for="guestCount">Nombre de personnes</label><select id="guestCount"><option>1 personne</option><option selected>2 personnes</option><option>3 personnes</option><option>4 personnes</option><option>5 personnes</option><option>6 personnes ou plus</option></select></div>
    <div class="field"><label for="roomCount">Nombre d'appartements</label><select id="roomCount"><option>1</option><option>2</option><option>3</option></select></div>
    <div class="field full"><label for="bookingNote">Précision (facultatif)</label><textarea id="bookingNote" rows="2" placeholder="Votre demande particulière"></textarea></div>
-   <button class="btn btn-dark" type="submit">Envoyer ma demande sur WhatsApp ↗</button>
+   <button class="btn btn-dark" type="submit">Envoyer ma demande sur WhatsApp <span class="arrow-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M7 17 17 7M7 7h10v10"/>
+  </svg>
+</span></button>
   </form>
  </div>
 </div>
