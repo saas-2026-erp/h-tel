@@ -234,6 +234,27 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
 *{-webkit-tap-highlight-color:transparent}
 @media(max-width:700px){.gallery-main{height:290px}.gallery-thumbs button{flex-basis:64px;height:48px}.section-title{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  
+/* FLÈCHES DES BOUTONS — RENDU IDENTIQUE SUR TOUS LES APPAREILS */
+.arrow-icon{
+  display:inline-block;
+  width:16px;
+  height:16px;
+  flex:0 0 16px;
+  vertical-align:middle;
+}
+
+.arrow-icon svg{
+  display:block;
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
 </style>
 </head>
 <body>
@@ -243,7 +264,11 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
   <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
    <a href="#accueil">Accueil</a><a href="#residence">La résidence</a><a href="#appartements">Appartements</a><a href="#services">Services</a><a href="#avis">Témoignages</a><a href="#contact">Contact</a>
   </nav>
-  <a class="btn btn-gold nav-cta" href="#appartements">Voir les appartements ↗</a>
+  <a class="btn btn-gold nav-cta" href="#appartements">Voir les appartements <span class="arrow-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M7 17 17 7M7 7h10v10"/>
+  </svg>
+</span></a>
   <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
  </div>
 </header>
@@ -253,7 +278,15 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
   <div class="hero-kicker" id="heroKicker">Séjourner autrement · Yamoussoukro</div>
   <h1 id="heroTitle">Le confort d'un chez-soi,<br><em>le service en plus.</em></h1>
   <p class="hero-lead" id="heroLead">Découvrez des appartements meublés pensés pour vos séjours, vos déplacements professionnels et vos moments de détente.</p>
-  <div class="hero-actions"><a class="btn btn-gold" href="#appartements">Découvrir nos appartements ↗</a><a class="btn btn-outline" href="#contact">Nous contacter ↗</a></div>
+  <div class="hero-actions"><a class="btn btn-gold" href="#appartements">Découvrir nos appartements <span class="arrow-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M7 17 17 7M7 7h10v10"/>
+  </svg>
+</span></a><a class="btn btn-outline" href="#contact">Nous contacter <span class="arrow-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M7 17 17 7M7 7h10v10"/>
+  </svg>
+</span></a></div>
  </div><div class="hero-note">Confort · Sérénité · Hospitalité</div>
 </section>
 <section class="trust-strip"><div class="container trust-grid">
@@ -297,7 +330,11 @@ button:focus,button:focus-visible,a:focus,a:focus-visible{outline:none!important
  </div>
 </section>
 <section class="location" id="localisation">
- <div class="location-copy"><div class="eyebrow">Nous trouver</div><h2 class="section-title">Un emplacement pratique pour votre séjour.</h2><p class="section-copy" id="addressText">Adresse de la résidence à personnaliser, Yamoussoukro, Côte d'Ivoire.</p><a class="btn btn-dark" id="mapLink" href="https://maps.google.com/" target="_blank" rel="noopener">Voir l'itinéraire ↗</a></div>
+ <div class="location-copy"><div class="eyebrow">Nous trouver</div><h2 class="section-title">Un emplacement pratique pour votre séjour.</h2><p class="section-copy" id="addressText">Adresse de la résidence à personnaliser, Yamoussoukro, Côte d'Ivoire.</p><a class="btn btn-dark" id="mapLink" href="https://maps.google.com/" target="_blank" rel="noopener">Voir l'itinéraire <span class="arrow-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <path d="M7 17 17 7M7 7h10v10"/>
+  </svg>
+</span></a></div>
  <div class="location-visual" role="img" aria-label="Environnement de la résidence"></div>
 </section>
 <section class="contact-section" id="contact">
